@@ -252,10 +252,11 @@ def menu():
         blue("\n╔══════════════════════════════════════╗")
         blue("║       WebSite İndirici v1.0          ║")
         blue("╚══════════════════════════════════════╝")
-        print("  1) Site indir (headless)")
-        print("  2) Site indir (tarayıcı görünür)")
-        print("  3) Çıkış")
-        secim = input("Seçim: ").strip()
+        print(Fore.YELLOW + "\t\tby Alperen Buba")
+        print("  1) Download the site (headless)")
+        print("  2) Download the site (browser appears)")
+        print("  3) Exit")
+        secim = input("  > ").strip()
 
         if secim == "1":
             url = input("URL: ").strip()
@@ -278,7 +279,7 @@ def menu():
                 err(f"Hata: {e}")
 
         elif secim == "3":
-            blue("Görüşürüz.")
+            blue("Goodbye.")
             break
         else:
             warn("Geçersiz seçim")
@@ -288,5 +289,5 @@ if __name__ == "__main__":
     try:
         menu()
     except KeyboardInterrupt:
-        blue("\nÇıkılıyor...")
+        blue("\nLogout in progress...")
         sys.exit(0)
